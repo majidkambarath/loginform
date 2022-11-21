@@ -1,0 +1,28 @@
+<script >
+
+    var EmailError = document.getElementById('Email-error');
+    var PasswordError = document.getElementById('Password-error');
+    function validateEmail(){
+    var Email = document.getElementById('Email').value;
+     
+    if (Email.length==0){
+      EmailError.innerHTML = 'Email ID is not required'
+      return false;
+    }
+    if(!Email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+      EmailError.innerHTML = 'Email Invalid'
+      return false;
+    }
+    EmailError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+      return true;
+    }
+    function passwordValidate(){
+    var password = document.getElementById('password').value
+    if(password.length < 3){
+      PasswordError.innerHTML = 'password is not required'
+      return false;
+    }
+    PasswordError.innerHTML = '<i class="fa-sharp fa-solid fa-circle-check"></i>';
+      return true;
+    }
+</script>

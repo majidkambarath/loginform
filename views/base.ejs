@@ -1,0 +1,26 @@
+<%-include('header')-%>
+<div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form action="/router/login" method="post">
+          <h1>
+            Login
+          </h1>
+         <div class="from-child">
+          <input type="email" class="form-control" name="email" id="Email" onkeyup="validateEmail()" placeholder="Email" required="" >
+          <span id="Email-error"> </span>
+         </div>
+        <div class="from-child"> 
+          <input type="password" name="password" id="password" onkeyup="passwordValidate()" placeholder="Password">
+          <span id="Password-error"></span>
+        </div>
+        <!-- <button type="button" class="submit-btn" value="submit"> submit </button> -->
+          <input type="submit" value="Login In" class="submit-btn">
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="script.js"></script> -->
+ <%-include('script')-%>   
+<%-include('footer')-%>
